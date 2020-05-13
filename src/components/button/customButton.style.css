@@ -1,0 +1,17 @@
+.diagnosify-button{
+    padding: 10px 20px;
+    background: var(--blue);
+    border-radius: 5px;
+    border: 1px solid var(--blue);
+    font-weight: bold;
+}
+.diagnosify-button:hover{
+    border: 1px solid var(--blue);
+    background: transparent;
+}
+.button2{
+    background: transparent;
+}
+.button2:hover{
+    background: var(--blue);
+}

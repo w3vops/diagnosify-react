@@ -11,3 +11,11 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+button:focus{
+  outline: none;
+}
+
+:root{
+  --dark-blue: #0091bd;
+  --blue: #46c2e8;
+}
