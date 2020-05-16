@@ -1,17 +1,14 @@
 import React from "react";
 import "./homepage.style.css";
-import NavBar from "../../components/navbar/navbar";
 import CustomButton from "../../components/button/customButton";
 import CustomCard from "../../components/card/card";
 import Mike from "../../assets/images/mike.jpg";
 import Nii from "../../assets/images/nii.jpg";
 import GTL from "../../assets/images/gtl_logo.png";
-import Footer from "../../components/footer/footer";
 
 const Homepage = () => {
     return (
         <div className="home">
-            <NavBar/>
             <div className="cover">
                 <div className="overlay">
                     <h1>Skin disease diagnosis <br/>at your fingertips</h1>
@@ -30,7 +27,7 @@ const Homepage = () => {
                             the <span className="make-blue">whole</span> of Ghana</h1>
                     </div>
                     <div className="col-xs-12 col-sm-12 col-md-8 col-lg-8">
-                        <h4 className="problem2">Diagnosify is here to bridge the gap between the few dermatologists in
+                        <h4 className="problem2" data-aos="fade-up">Diagnosify is here to bridge the gap between the few dermatologists in
                             Ghana and Ghanaians.
                             Through it's AI powered system, Diagnosify ensures Ghanaians with skin conditions do not
                             resort to self diagnosis, that may end up being fatal.</h4>
@@ -41,17 +38,17 @@ const Homepage = () => {
                 <h1>Get your solution in 3 steps</h1>
                 <div className="container-fluid">
                     <div className="row">
-                        <div className="step1 col-xs-12 col-sm-12 col-md-4 col-lg-4">
+                        <div className="step1 col-xs-12 col-sm-12 col-md-4 col-lg-4" data-aos="fade-in">
                             <i className="fas fa-file-upload"/>
                             <h5>Upload an image</h5>
                             <p>Upload an image of the part of your skin with the lesion and scan it with our system</p>
                         </div>
-                        <div className="step2 col-xs-12 col-sm-12 col-md-4 col-lg-4">
+                        <div className="step2 col-xs-12 col-sm-12 col-md-4 col-lg-4" data-aos="fade-in" data-aos-delay="500">
                             <i className="fas fa-poll-h"/>
                             <h5>Receive reports</h5>
                             <p> Receive report on the name of your skin lesion, the accuracy and its risk indication</p>
                         </div>
-                        <div className="step3 col-xs-12 col-sm-12 col-md-4 col-lg-4">
+                        <div className="step3 col-xs-12 col-sm-12 col-md-4 col-lg-4" data-aos="fade-in" data-aos-delay="1000">
                             <i className="fas fa-stethoscope"/>
                             <h5>Connect to a doctor</h5>
                             <p>Get connected with a
@@ -70,7 +67,7 @@ const Homepage = () => {
             </section>
             <section className="partners">
                 <h1>Our partners</h1>
-                <img src={GTL} alt="Ghana tech lab logo"/>
+                <img src={GTL} alt="Ghana tech lab logo" data-aos="slide-left"/>
             </section>
             <section className="team">
                 <h1>Meet the team</h1>
@@ -96,13 +93,12 @@ const Homepage = () => {
             </section>
             <section className="jumbo">
                 <div className="overlay jumbo-overlay">
-                <div className="jumbo-text">
+                <div className="jumbo-text" data-aos="slide-up">
                     <h1>Ready for your first diagnosis?</h1>
                     <CustomButton button_type="type1" text="Get Started"/>
                 </div>
                 </div>
             </section>
-            <Footer />
         </div>
     )
 };

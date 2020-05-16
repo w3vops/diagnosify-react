@@ -65,7 +65,10 @@ li.dropdown {
 .menu{
     margin: 0 auto;
 }
-
+.active-nav{
+    color: var(--dark-blue) !important;
+    font-weight: bolder;
+}
 
 @media only screen and (min-width: 600px) {
     .dropdown-content {

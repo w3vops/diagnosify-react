@@ -20,6 +20,10 @@ h1{
 body{
   scroll-behavior: smooth;
 }
+a:hover{
+  text-decoration: none;
+  background: transparent!important;
+}
 
 :root{
   --dark-blue: #0091bd;
