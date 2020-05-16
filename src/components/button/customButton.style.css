@@ -11,7 +11,28 @@
 }
 .button2{
     background: transparent;
+    color: white;
 }
 .button2:hover{
     background: var(--blue);
+}
+.button3{
+    color: white;
+}
+.button3:hover{
+    background: var(--dark-blue);
+    border: 1px solid var(--dark-blue);
+}
+button{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+button .fab{
+    color: red;
+    font-size: 1.3em;
+}
+.fa-apple{
+    color: black !important;
 }

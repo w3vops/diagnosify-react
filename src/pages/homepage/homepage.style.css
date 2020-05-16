@@ -22,8 +22,111 @@
 .cover h3{
     color: rgba(255, 255, 255, 0.75);
 }
+.cover-buttons{
+    display: flex;
+}
+.fab{
+    color: black;
+    font-size: 2em;
+    margin-right: 20px;
+}
+.space{
+    width: 20px;
+}
+.home section{
+    margin-top: 150px;
+    padding: 0 5%;
+    text-align: center;
+}
+.service h1{
+    margin-bottom: 20px;
+}
+.service h5{
+    font-weight: bolder;
+}
+.fas{
+    color: var(--blue);
+    font-size: 4em;
+    margin-bottom: 20px;
+}
+.service .row{
+    text-align: center;
+}
+.medium{
+    background: #0091bd;
+    padding: 50px 5%! important;
+    text-align: center;
+}
+.medium h5{
+    font-family: Chalkduster, serif;
+    line-height: 2em;
+    font-weight: 900;
+}
+.whiten{
+    color: whitesmoke;
+    font-weight: bolder;
+
+}
+.fa-readme{
+    color: whitesmoke;
+}
+.problem{
+    line-height: 1.5em;
+}
+.problem-container{
+    border: 10px solid var(--dark-blue);
+    border-right: none;
+    border-left: none;
+    padding: 40px 5%;
+}
+.make-blue{
+    color: var(--dark-blue);
+}
+.problem-statement .row{
+    align-items: center;
+    text-align: left;
+}
+.problem2{
+    line-height: 2em;
+}
+.team h1{
+    margin-bottom: 50px;
+}
+.jumbo{
+    height: 520px;
+    align-items: center;
+    background-image: url("../../assets/images/jumbo.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 0 !important;
+}
+.jumbo-text{
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+}
+.jumbo-overlay{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    padding: 0 5%;
+}
+.team .team-card{
+    padding: 0;
+    margin-bottom: 30px;
+}
 @media only screen and (min-width: 600px){
     .cover h1{
         font-size: 4em
+    }
+    .problem2{
+        padding-left: 100px;
+    }
+    .team .team-card{
+        padding: 15px;
+        margin-bottom: 0;
     }
 }

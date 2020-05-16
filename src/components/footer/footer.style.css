@@ -1,0 +1,15 @@
+.footer{
+    background: #F8F9FA;
+    padding: 100px 5% !important;
+}
+.footer-terms{
+    display: flex;
+    justify-content: space-between;
+}
+.footer .terms{
+    cursor: pointer;
+    color: var(--blue);
+}
+.footer .terms:hover{
+    color: var(--dark-blue);
+}

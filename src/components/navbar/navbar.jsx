@@ -1,7 +1,6 @@
-import React, {useEffect, useState} from "react";
+import React from "react";
 import "./navbar.style.css";
 import Logo from "../../assets/images/logo.png";
-import {Link, NavLink} from "react-router-dom";
 import CustomButton from "../button/customButton";
 
 
@@ -14,7 +13,7 @@ const NavBar = () => {
                 <span className="line" id="line-two"/>
                 <span className="line" id="line-three"/>
             </span>
-            <div id="menu" className="menu">
+            <div id="menu" className="menu collapse navbar-collapse">
                 <ul className="navbar-nav">
                     <li className="nav-item">
                     <span className="nav-link">
@@ -22,8 +21,8 @@ const NavBar = () => {
                     </span>
                     </li>
                     <li className="dropdown nav-item">
-                        <span className="drop-button nav-link">Services</span>
-                        <div className="dropdown-content">
+                        <span className="drop-button nav-link" data-toggle="dropdown" data-target="service_target">Services</span>
+                        <div className="dropdown-content dropdown-menu" aria-labelledby="service_target">
                             <a href="#">Scan image</a>
                             <a href="#">Get mobile app</a>
                         </div>
@@ -35,7 +34,7 @@ const NavBar = () => {
                     </li>
                     <li className="nav-item">
                     <span className="nav-link">
-                        <CustomButton text="Get Started"/>
+                        <CustomButton text="Get Started" button_type='type1'/>
                     </span>
                     </li>
                 </ul>
