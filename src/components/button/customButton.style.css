@@ -23,6 +23,14 @@
     background: var(--dark-blue);
     border: 1px solid var(--dark-blue);
 }
+.button4{
+    color: black;
+    background:transparent;
+    width: 100%;
+}
+.button4:hover{
+    border: 1px solid var(--dark-blue);
+}
 button{
     display: flex;
     flex-direction: row;
@@ -35,4 +43,9 @@ button .fab{
 }
 .fa-apple{
     color: black !important;
+}
+.google{
+    height: 20px;
+    width: 20px;
+    margin-right: 20px;
 }
