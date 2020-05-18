@@ -5,7 +5,7 @@ import ScrollToTop from "./utils/scroll-to-top";
 import {Switch, Route} from "react-router-dom";
 import NavBar from "./components/navbar/navbar";
 import Footer from "./components/footer/footer";
-import SignUp from "./pages/signup/signup";
+import Welcome from "./pages/welcome/welcome";
 
 
 function App() {
@@ -14,7 +14,7 @@ function App() {
           <NavBar/>
           <Switch>
             <Route path="/" exact component={Homepage}/>
-            <Route path='/sign-up' component={SignUp} />
+            <Route path='/welcome' component={Welcome} />
           </Switch>
         <Footer/>
         </>

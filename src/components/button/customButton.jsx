@@ -4,9 +4,9 @@ import {Link} from "react-router-dom";
 import Google from "../../assets/images/google.png";
 
 
-const CustomButton = ({text, button_type, icon, link}) => {
+const CustomButton = ({text, button_type, icon, link, toggle}) => {
     if (button_type === 'type1'){
-        return <Link to={link}><button className="diagnosify-button"><i className={icon}/>{text}</button></Link>
+        return <Link to={link}><button className="diagnosify-button" onClick={toggle}><i className={icon}/>{text}</button></Link>
     }else if (button_type === 'type2'){
         return <Link to={link}><button className="diagnosify-button button2"><i className={icon}/>{text}</button></Link>
     }else if (button_type === 'type3'){

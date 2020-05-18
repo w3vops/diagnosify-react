@@ -19,12 +19,34 @@ h1{
 }
 body{
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 a:hover{
   text-decoration: none;
   background: transparent!important;
 }
-
+@keyframes autofill {
+  0%,100% {
+    color: #666;
+    background: transparent;
+  }
+}
+@-webkit-keyframes autofill {
+  0%,100% {
+    color: #666;
+    background: transparent;
+  }
+}
+input:-webkit-autofill{
+  animation-delay: 1s; /* Safari support - any positive time runs instantly */
+  animation-name: autofill;
+  animation-fill-mode: both;
+}
+input:-webkit-autofill {
+  -webkit-animation-delay: 1s; /* Safari support - any positive time runs instantly */
+  -webkit-animation-name: autofill;
+  -webkit-animation-fill-mode: both;
+}
 :root{
   --dark-blue: #0091bd;
   --blue: #46c2e8;
