@@ -8,8 +8,8 @@ const Dashboard = () => {
     return (
         <div className='main-dashboard'>
             <div className="sidebar">
-                {/*<UserSidebar/>*/}
-                <DoctorSidebar/>
+                <UserSidebar/>
+                {/*<DoctorSidebar/>*/}
             </div>
             <div className="dashboard">
                 <h1>Coming soon</h1>

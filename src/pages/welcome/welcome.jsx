@@ -144,16 +144,6 @@ const Welcome = () => {
                                 <input type="text" id='signInPass' name='signInPass' onChange={welcomeValidatePass}
                                        onBlur={welcomeValidatePass}/>
                             </label>
-                            <div className="check">
-                                <label>
-                                    <input type="radio" name="doctor" id="doctor-check" defaultChecked={true}/>
-                                    I am a user
-                                </label>
-                                <label>
-                                    <input type="radio" name="doctor" id="doctor-check"/>
-                                    I am a doctor
-                                </label>
-                            </div>
                             <div className="submit">
                                 <CustomButton button_type='submit' text='Submit'/>
                             </div>

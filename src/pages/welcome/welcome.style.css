@@ -115,20 +115,6 @@ input {
     justify-content: space-between;
     align-items: center;
 }
-.check{
-    display: flex;
-}
-.check label{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    margin-right: 30px;
-}
-.check input{
-    margin-right: 10px;
-    margin-bottom: 4px;
-}
 
 @media only screen and (min-width: 600px) {
     .signup-card {
