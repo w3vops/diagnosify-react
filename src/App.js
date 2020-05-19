@@ -6,6 +6,7 @@ import {Switch, Route} from "react-router-dom";
 import NavBar from "./components/navbar/navbar";
 import Footer from "./components/footer/footer";
 import Welcome from "./pages/welcome/welcome";
+import Dashboard from "./pages/dashboard/dashboard";
 
 
 function App() {
@@ -15,6 +16,7 @@ function App() {
           <Switch>
             <Route path="/" exact component={Homepage}/>
             <Route path='/welcome' component={Welcome} />
+            <Route path='/dashboard' component={Dashboard}/>
           </Switch>
         <Footer/>
         </>

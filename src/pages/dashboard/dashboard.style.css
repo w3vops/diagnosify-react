@@ -1,0 +1,27 @@
+.main-dashboard{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.main-dashboard .sidebar{
+    width: 100%;
+}
+.main-dashboard .dashboard{
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+@media only screen and (min-width: 768px){
+    .main-dashboard .sidebar{
+        width: 20%;
+    }
+    .main-dashboard{
+        flex-direction: row;
+    }
+    .main-dashboard .dashboard{
+        width: 80%;
+    }
+
+}
