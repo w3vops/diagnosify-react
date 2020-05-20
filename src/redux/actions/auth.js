@@ -60,6 +60,7 @@ const verifySuccess = () => {
 };
 
 export const loginUser = (email, password) => dispatch => {
+    console.log('EMAIL', email);
     dispatch(requestLogin());
     myFirebase
         .auth()

@@ -189,7 +189,7 @@ function mapStateToProps(state) {
     };
 }
 const mapDispatchToProps = dispatch => ({
-    loginUser: (email, password) => dispatch(loginUser({email, password}))
+    loginUser: (email, password) => dispatch(loginUser(email, password))
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(Welcome);
