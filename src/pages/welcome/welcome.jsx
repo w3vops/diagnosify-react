@@ -1,9 +1,16 @@
 import React, {useEffect, useState} from "react";
 import "./welcome.style.css";
 import CustomButton from "../../components/button/customButton";
+import {connect} from "react-redux";
+import {Redirect} from "react-router-dom";
+import {loginUser} from "../../redux/actions";
 import {errorObject, validateEmail, validatePassword} from "../../utils/validation";
 
-const Welcome = () => {
+const Welcome = ({loginUser, isLoggingIn, loginError, isAuthenticated}) => {
+        const [userCredentials, setUserCredentials] = useState({
+            email: '',
+            password: '',
+        });
         const [error, setError] = useState({
             signUpMailError: '',
             signUpPassError: '',
@@ -15,7 +22,6 @@ const Welcome = () => {
             eye: "inline-block",
             cancelEye: "none",
         });
-
 
         const toggleVisible = (event) => {
             if (event.target.id === "eye") {
@@ -78,8 +84,22 @@ const Welcome = () => {
             validatePassword(event);
             errorSetter();
         };
+        const handleEmailChange = (event) => {
+            welcomeValidateEmail(event);
+            setUserCredentials({...userCredentials, email: event.target.value});
+        };
+        const handlePasswordChange = (event) => {
+            welcomeValidatePass(event);
+            setUserCredentials({...userCredentials, email: event.target.value})
+        };
 
-        return (
+        const handleSubmit = (event) => {
+            event.preventDefault();
+            console.log('submit');
+            loginUser(userCredentials.email, userCredentials.password);
+        };
+
+        return isAuthenticated ? <Redirect to='/dashboard'/> : (
             <>
                 <div className="signup" id='signUpPage'>
                     <div className="signup-card">
@@ -128,10 +148,10 @@ const Welcome = () => {
                             <p className='error signInMailError'>{error.signInMailError}</p>
                             <p className='error signInPassError'>{error.signInPassError}</p>
                         </div>
-                        <form action="" id="signInForm">
+                        <form id="signInForm" onSubmit={handleSubmit}>
                             <label htmlFor="signInMail" className='form-input'>
                                 Email
-                                <input type="email" id='sigInMail' name='signInMail' onChange={welcomeValidateEmail}
+                                <input type="email" id='sigInMail' name='signInMail' onChange={handleEmailChange}
                                        onBlur={welcomeValidateEmail}/>
                             </label>
                             <label htmlFor="signInPass" className='form-input'>
@@ -141,7 +161,7 @@ const Welcome = () => {
                                                                    style={{display: visible.cancelEye}}
                                                                    onClick={toggleVisible} id='cancelEye'/>
                             </span>
-                                <input type="text" id='signInPass' name='signInPass' onChange={welcomeValidatePass}
+                                <input type="text" id='signInPass' name='signInPass' onChange={handlePasswordChange}
                                        onBlur={welcomeValidatePass}/>
                             </label>
                             <div className="submit">
@@ -160,4 +180,16 @@ const Welcome = () => {
         )
     }
 ;
-export default Welcome;
+
+function mapStateToProps(state) {
+    return {
+        isLoggingIn: state.auth.isLoggingIn,
+        loginError: state.auth.loginError,
+        isAuthenticated: state.auth.isAuthenticated
+    };
+}
+const mapDispatchToProps = dispatch => ({
+    loginUser: (email, password) => dispatch(loginUser({email, password}))
+});
+
+export default connect(mapStateToProps, mapDispatchToProps)(Welcome);

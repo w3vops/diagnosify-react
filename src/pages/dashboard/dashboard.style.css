@@ -16,6 +16,7 @@
 @media only screen and (min-width: 768px){
     .main-dashboard .sidebar{
         width: 20%;
+        max-width: 220px;
     }
     .main-dashboard{
         flex-direction: row;
